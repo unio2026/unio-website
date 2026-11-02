@@ -22,5 +22,15 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/late-night-driving",
+      "destination": "/late-night-driving.html"
+    },
+    {
+      "source": "/message",
+      "destination": "/message.html"
+    }
   ]
 }
