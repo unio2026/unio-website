@@ -1,0 +1,20 @@
+UNIO V14 — FUNCTIONAL CANDIDATE (not yet launch cleared)
+
+Completed locally:
+- Approved V13 layout, imagery and visual structure preserved.
+- Existing Supabase Edge Function URL retained.
+- Form required name/email and explicit processing consent; updates separate.
+- Honeypot field retained.
+- Added linked privacy notice draft and link in footer.
+- Added input length limits, submit busy state, success/error feedback.
+
+BLOCKERS BEFORE PUBLIC LAUNCH:
+1. Activate privacy@unio.pal and verify delivery.
+2. Complete controller contact details, retention period, lawful basis assessment and transfer details in privacy notice.
+3. Implement and test server-side rate limiting/bot protection on register-interest.
+4. Perform live POST test and confirm one new database row, then delete test row.
+5. Test browser form, mobile layout and accessibility on actual hosting.
+6. Connect domain and HTTPS; configure hosting and security headers.
+7. Confirm consent text and marketing procedures with appropriate UK legal/privacy advice.
+
+No claim of a successful live HTTP test is made. This environment could not resolve the Supabase endpoint hostname.
