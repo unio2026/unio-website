@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#090909" name="theme-color"/><title>Late Night Driving — UNIO</title><style>*{box-sizing:border-box}body{margin:0;background:#090909;color:#f2f1ee;font-family:Arial,Helvetica,sans-serif}header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}header a{color:inherit;text-decoration:none;font-size:12px;letter-spacing:.1em;text-transform:uppercase}header strong{font-size:25px;letter-spacing:.23em}.hero{position:relative;min-height:440px;display:flex;align-items:end;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.15)),url('assets/coastal-road.jpg') center 57%/cover;padding:80px 6%}.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#bbb}h1{font-size:clamp(50px,9vw,120px);letter-spacing:-.07em;line-height:.95;margin:20px 0}p{color:#c3c1bd}.content{max-width:1040px;padding:65px 6% 110px;margin:auto}.meta{color:#a8a6a2;font-size:13px;margin-bottom:30px}.track{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:18px;border-bottom:1px solid #303030;padding:18px 0}.num{color:#777;font-size:12px}.song{font-size:16px;font-weight:600}.artist{font-size:13px;color:#aaa;margin-top:5px}.find{font-size:11px;color:#d0cfcc;text-decoration:none;border:1px solid #555;padding:10px 12px;white-space:nowrap}.find:hover{background:#eee;color:#111}.note{font-size:12px;color:#999;margin-top:36px;line-height:1.7}footer{padding:30px 6%;border-top:1px solid #333;color:#888;font-size:12px}@media(max-width:540px){.hero{min-height:400px}.track{grid-template-columns:25px 1fr auto;gap:9px}.find{padding:8px;font-size:10px}.song{font-size:14px}}
+.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:28px 0}
+.search{flex:1;min-width:220px;background:#171717;color:#f4f4f4;border:1px solid #555;padding:13px 16px;border-radius:0}
+.search:focus{outline:1px solid #eee}
+.track{grid-template-columns:32px 52px minmax(0,1fr) auto;gap:14px}
+.cover{width:52px;height:52px;object-fit:cover;background:#222;filter:grayscale(.85)}
+.track-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.play-preview{color:#eee;background:transparent;border:1px solid #777;padding:10px 12px;cursor:pointer;font:inherit;font-size:12px}
+.play-preview:disabled{opacity:.4;cursor:not-allowed}
+.play-preview:not(:disabled):hover,.find:hover{background:#eee;color:#111}
+.service{color:#aaa;text-decoration:none;font-size:12px;border-bottom:1px solid #555}
+.service:hover{color:white}
+.player{position:sticky;bottom:0;background:#171717;border-top:1px solid #777;padding:14px 6%;z-index:3;display:none}
+.player.active{display:block}
+.player-inner{max-width:1040px;margin:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.player audio{width:min(100%,360px);height:35px;filter:grayscale(1)}
+.player-title{min-width:160px;flex:1;font-size:13px}
+.player button{background:none;color:#fff;border:1px solid #777;padding:8px 12px;cursor:pointer}
+.status{font-size:12px;color:#aaa}
+@media(max-width:680px){.track{grid-template-columns:24px 42px minmax(0,1fr);gap:10px}.cover{width:42px;height:42px}.track-actions{grid-column:3;justify-content:flex-start}.find,.play-preview{font-size:11px;padding:8px}.service{font-size:11px}}
+</style>
+<meta name="description" content="Explore Late Night Driving, a carefully selected soundtrack for taking the long way home, curated by UNIO.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://unio.today/late-night-driving.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#101010">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UNIO">
+<meta property="og:title" content="Late Night Driving — UNIO">
+<meta property="og:description" content="Explore Late Night Driving, a carefully selected soundtrack for taking the long way home, curated by UNIO.">
+<meta property="og:url" content="https://unio.today/late-night-driving.html">
+<meta property="og:image" content="https://unio.today/social-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UNIO — Built for you. Built with you.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Late Night Driving — UNIO">
+<meta name="twitter:description" content="Explore Late Night Driving, a carefully selected soundtrack for taking the long way home, curated by UNIO.">
+<meta name="twitter:image" content="https://unio.today/social-preview.jpg">
+</head><body><header><a href="index.html"><strong>UNIO</strong></a><a href="index.html">Back to UNIO ↗</a></header><section class="hero"><div><div class="eyebrow">UNIO / Selected sounds</div><h1>Late Night<br/>Driving.</h1><p>A soundtrack for taking the long way home.</p></div></section><main class="content"><div class="eyebrow">The complete selection</div><h2 id="count">55 tracks</h2><div class="meta" id="duration">3 hours 29 minutes · Curated by UNIO</div><div class="toolbar"><input aria-label="Search songs or artists" class="search" id="trackSearch" placeholder="Search songs or artists" type="search"/><span class="status" id="searchStatus"></span></div><div aria-live="polite" id="tracks"></div><p class="note">Listen to short authorised previews where available, or open the full recording in Apple Music, Spotify or YouTube Music. Preview availability varies by track and country. UNIO does not host the recordings.</p></main><footer>UNIO · Built for you. Built with you.</footer><aside class="player" id="player"><div class="player-inner"><div class="player-title" id="nowPlaying">Preview</div><audio controls="" id="previewAudio" preload="none"></audio><button id="closePlayer" type="button">Close</button></div></aside><script>
+const collection={"title": "Late Night Driving", "subtitle": "A soundtrack for taking the long way home.", "duration": "3 hours 29 minutes", "tracks": [{"title": "Right", "artist": "Khruangbin"}, {"title": "B-Side", "artist": "Khruangbin & Leon Bridges"}, {"title": "Show Me How", "artist": "Men I Trust"}, {"title": "Way With Words", "artist": "Bahamas"}, {"title": "Water Flow", "artist": "Klyne"}, {"title": "Winter Sun", "artist": "Ego Ella May"}, {"title": "Back In Love", "artist": "LEISURE"}, {"title": "Lauren", "artist": "Men I Trust"}, {"title": "Dreams", "artist": "Vanilla"}, {"title": "Fading (feat. Amaria)", "artist": "Elijah Fox"}, {"title": "Impurities", "artist": "Arlo Parks"}, {"title": "Electric Feel", "artist": "LonelyTwin"}, {"title": "Langsette", "artist": "Letherette"}, {"title": "You got time and I got money", "artist": "Smerz"}, {"title": "Where You Belong", "artist": "Little Dragon"}, {"title": "Don’t Smile", "artist": "Sabrina Carpenter"}, {"title": "Charade", "artist": "Jaco Jaco"}, {"title": "Blessed", "artist": "August Charles"}, {"title": "Business Solutions", "artist": "JORDANN"}, {"title": "DISKO MUSHROOM", "artist": "Sunni Colón"}, {"title": "Shee", "artist": "quickly, quickly"}, {"title": "Thinking About It", "artist": "BLISSING"}, {"title": "It's Not Enough", "artist": "Aiden Ayers & Yu Su"}, {"title": "Mrs Magic", "artist": "Strawberry Guy"}, {"title": "Saturnus", "artist": "Morabeza Tobacco"}, {"title": "The Wave", "artist": "Jungle"}, {"title": "Settle Down", "artist": "North Downs"}, {"title": "Manifest", "artist": "RUBII"}, {"title": "CHANCES", "artist": "KAYTRANADA & Shay Lia"}, {"title": "Flower Moon", "artist": "Durand Jones & The Indications"}, {"title": "Something About Us", "artist": "Daft Punk"}, {"title": "Tides", "artist": "Sweeps & NK Music"}, {"title": "Take Me Where Your Heart Is", "artist": "Q Marsden"}, {"title": "LUCID DREAMS", "artist": "Leon Thomas & Masego"}, {"title": "Low Season", "artist": "Poolside"}, {"title": "Free (Single Version)", "artist": "Deniece Williams"}, {"title": "Rollin'", "artist": "K. Masterpieces"}, {"title": "Oh Why", "artist": "LEISURE & Two Another"}, {"title": "Second Chance", "artist": "Zac Farro"}, {"title": "OUTTA MY MIND", "artist": "Monsune"}, {"title": "Love Again", "artist": "Moon Soul"}, {"title": "Time Moves Slow (feat. Sam Herring)", "artist": "BADBADNOTGOOD"}, {"title": "Girl (feat. KAYTRANADA)", "artist": "The Internet"}, {"title": "Tieduprightnow", "artist": "Parcels"}, {"title": "Hunnybee", "artist": "Unknown Mortal Orchestra"}, {"title": "Got To Be Good", "artist": "Gotts Street Park & Pip Millett"}, {"title": "In Your Eyes (feat. Charlotte Day Wilson)", "artist": "BADBADNOTGOOD"}, {"title": "Shameful Game", "artist": "Pale Jay"}, {"title": "Casio", "artist": "Jungle"}, {"title": "Her", "artist": "The American Dawn"}, {"title": "Safe", "artist": "JP Saxe"}, {"title": "Redbone", "artist": "Lofi Fruits Music & Chill Fruits Music"}, {"title": "Redbone", "artist": "Childish Gambino"}, {"title": "Darlin'", "artist": "Jean Dawson"}, {"title": "Rabbit", "artist": "The Neighbourhood"}]};
+const tracks=collection.tracks;
+const list=document.getElementById('tracks');
+const input=document.getElementById('trackSearch');
+const searchStatus=document.getElementById('searchStatus');
+const player=document.getElementById('player');
+const audio=document.getElementById('previewAudio');
+const nowPlaying=document.getElementById('nowPlaying');
+const cache=new Map();
+let currentButton=null;
+let searchTimer;
+document.getElementById('count').textContent=tracks.length+' tracks';
+document.getElementById('duration').textContent=collection.duration+' · Curated by UNIO';
+function searchUrl(service,t){
+ const q=encodeURIComponent(t.title+' '+t.artist);
+ return service==='apple'?'https://music.apple.com/gb/search?term='+q:
+ service==='spotify'?'https://open.spotify.com/search/'+q:
+ 'https://music.youtube.com/search?q='+q;
+}
+function link(service,t,label){
+ const a=document.createElement('a');a.className=service==='apple'?'find':'service';
+ a.href=searchUrl(service,t);a.target='_blank';a.rel='noopener noreferrer';
+ a.textContent=label;a.setAttribute('aria-label','Find '+t.title+' by '+t.artist+' on '+label);return a;
+}
+function preview(t,button){
+ const url=cache.get(t.title+'|'+t.artist);
+ if(!url)return;
+ if(currentButton)currentButton.textContent='▶ Preview';
+ if(currentButton===button && !audio.paused){audio.pause();button.textContent='▶ Preview';return;}
+ currentButton=button;
+ audio.src=url;nowPlaying.textContent=t.title+' — '+t.artist;
+ player.classList.add('active');audio.play().then(()=>{button.textContent='Ⅱ Pause'}).catch(()=>{button.textContent='▶ Preview'});
+}
+audio.addEventListener('ended',()=>{if(currentButton)currentButton.textContent='▶ Preview'});
+audio.addEventListener('pause',()=>{if(currentButton)currentButton.textContent='▶ Preview'});
+document.getElementById('closePlayer').addEventListener('click',()=>{
+ audio.pause();audio.removeAttribute('src');audio.load();player.classList.remove('active');
+ if(currentButton)currentButton.textContent='▶ Preview';currentButton=null;
+});
+function render(){
+ const q=input.value.trim().toLocaleLowerCase();
+ const filtered=tracks.map((t,i)=>({t,i})).filter(({t})=>(t.title+' '+t.artist).toLocaleLowerCase().includes(q));
+ list.replaceChildren();
+ searchStatus.textContent=filtered.length+' of '+tracks.length+' tracks';
+ for(const {t,i} of filtered){
+  const row=document.createElement('div');row.className='track';
+  const n=document.createElement('span');n.className='num';n.textContent=String(i+1).padStart(2,'0');
+  const cover=document.createElement('div');cover.className='cover';cover.setAttribute('aria-hidden','true');
+  const details=document.createElement('div');
+  const song=document.createElement('div');song.className='song';song.textContent=t.title;
+  const artist=document.createElement('div');artist.className='artist';artist.textContent=t.artist;details.append(song,artist);
+  const actions=document.createElement('div');actions.className='track-actions';
+  const play=document.createElement('button');play.className='play-preview';play.type='button';
+  play.textContent='Preview unavailable';play.disabled=true;
+  play.addEventListener('click',()=>preview(t,play));
+  actions.append(play,link('apple',t,'Apple Music ↗'),link('spotify',t,'Spotify ↗'),link('youtube',t,'YouTube Music ↗'));
+  row.append(n,cover,details,actions);list.append(row);
+  lookup(t).then(result=>{
+   if(result?.artworkUrl100){const img=document.createElement('img');img.className='cover';img.alt='';img.loading='lazy';img.src=result.artworkUrl100.replace('100x100bb','200x200bb');cover.replaceWith(img);}
+   if(result?.previewUrl){cache.set(t.title+'|'+t.artist,result.previewUrl);play.disabled=false;play.textContent='▶ Preview';}
+  });
+ }
+}
+// The iTunes Search API supports JSONP. Script-tag requests work from file://
+// on browsers that block cross-origin fetch requests from local documents.
+let jsonpCounter=0;
+let activeRequests=0;
+const waitingRequests=[];
+function enqueueRequest(task){
+ return new Promise(resolve=>{
+  waitingRequests.push({task,resolve});
+  pumpRequests();
+ });
+}
+function pumpRequests(){
+ while(activeRequests<3 && waitingRequests.length){
+  const job=waitingRequests.shift();activeRequests++;
+  job.task().then(job.resolve,()=>job.resolve(null)).finally(()=>{activeRequests--;pumpRequests()});
+ }
+}
+function itunesJsonp(term){
+ return new Promise((resolve,reject)=>{
+  const callback='unioMusicLookup'+(++jsonpCounter);
+  const script=document.createElement('script');
+  let finished=false;
+  const finish=(err,data)=>{
+   if(finished)return;finished=true;
+   clearTimeout(timer);delete window[callback];script.remove();
+   if(err)reject(err);else resolve(data);
+  };
+  window[callback]=data=>finish(null,data);
+  script.onerror=()=>finish(new Error('Music catalogue unavailable'));
+  const timer=setTimeout(()=>finish(new Error('Music catalogue timed out')),12000);
+  script.src='https://itunes.apple.com/search?term='+encodeURIComponent(term)+
+   '&entity=song&limit=15&country=GB&callback='+callback;
+  document.head.appendChild(script);
+ });
+}
+const lookupPromises=new Map();
+function lookup(t){
+ const key=t.title+'|'+t.artist;
+ if(lookupPromises.has(key))return lookupPromises.get(key);
+ const promise=enqueueRequest(async()=>{
+  try{
+   const data=await itunesJsonp(t.title+' '+t.artist);
+   const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+   const target=norm(t.title),artist=norm(t.artist);
+   const results=data.results||[];
+   // Avoid incorrect covers and previews for similarly named recordings.
+   return results.find(x=>norm(x.trackName)===target &&
+      (norm(x.artistName)===artist || norm(x.artistName).includes(artist) || artist.includes(norm(x.artistName)))) ||
+      results.find(x=>norm(x.trackName)===target &&
+       norm(x.artistName).split(' ').some(word=>word.length>3 && artist.includes(word))) || null;
+  }catch(e){return null;}
+ });
+ lookupPromises.set(key,promise);return promise;
+}
+input.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,160)});
+render();
+</script></body></html>
