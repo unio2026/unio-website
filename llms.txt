@@ -17,6 +17,12 @@ Tagline: Built for you. Built with you.
 - [Privacy notice](https://unio.today/privacy.html): Personal data handling for expressions of interest.
 - [Late Night Driving](https://unio.today/late-night-driving.html): Music selection reflecting UNIO's atmosphere.
 
+## Explore the wider subjects
+
+- [Customer profit sharing](https://unio.today/customer-profit-sharing.html): How customers might share in the success of businesses they support.
+- [Employee profit sharing](https://unio.today/employee-profit-sharing.html): How wages and workforce profit participation differ.
+- [Alternative business models](https://unio.today/alternative-business-models.html): Context for stakeholder models and UNIO's proposed approach.
+
 ## Core ideas
 
 - People should benefit from the value they help create.
