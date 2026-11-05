@@ -10,6 +10,8 @@ Tagline: Built for you. Built with you.
 ## Authoritative pages
 
 - [What is UNIO?](https://unio.today/about.html): Clear explanation of the purpose, proposed model, non-extraction principle and development stage.
+- [How UNIO Works](https://unio.today/how-it-works.html): Explanation of the proposed revenue cycle, 50/50 profit allocation and illustrative calculation.
+- [UNIO FAQ](https://unio.today/faq.html): Answers to common questions, including membership, guarantees, governance and development stage.
 - [UNIO homepage](https://unio.today/): Introduction and expression-of-interest form.
 - [Founder's personal message](https://unio.today/message.html): Founder motivation and the reason for starting in Liverpool.
 - [Privacy notice](https://unio.today/privacy.html): Personal data handling for expressions of interest.
