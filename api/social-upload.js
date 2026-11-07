@@ -1,5 +1,7 @@
 import { put } from '@vercel/blob';
-import { timingSafeEqual } from 'node:crypto';
+import { timingSafeEqual, randomUUID } from 'node:crypto';
+
+export const config = { api: { bodyParser: false } };
 
 const MAX_BYTES = 8 * 1024 * 1024;
 const TYPES = { 'image/jpeg': 'jpg', 'image/webp': 'webp' };
@@ -42,7 +44,7 @@ export default async function handler(req, res) {
       : bytes.length > 12 && bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP';
     if (!valid) return res.status(415).json({ error: 'Image signature does not match content type' });
 
-    const path = 'social/' + crypto.randomUUID() + '.' + TYPES[type];
+    const path = 'social/' + randomUUID() + '.' + TYPES[type];
     const blob = await put(path, bytes, { access: 'public', contentType: type, addRandomSuffix: false });
     return res.status(201).json({ url: blob.url, contentType: type, size: bytes.length });
   } catch (err) {
