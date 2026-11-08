@@ -31,6 +31,14 @@
     {
       "source": "/message",
       "destination": "/message.html"
+    },
+    {
+      "source": "/social-preview.jpg",
+      "destination": "/assets/hero-landscape.jpg"
+    },
+    {
+      "source": "/es",
+      "destination": "/es.html"
     }
   ]
 }
