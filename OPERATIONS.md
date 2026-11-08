@@ -42,3 +42,7 @@ public.discovery_social_opportunities is a private server-managed queue for exac
 - Authorised Instagram comment integration remains blocked; do not auto-reply.
 - Provider transfer arrangements and ongoing retention handling need operational review; a revised notice is not a legal compliance certification.
 - Compromised-password protection in Supabase Auth remains disabled; review available plan/configuration before enabling.
+
+## Direct Instagram workspace
+
+Owner dashboard: https://unio.today/admin.html . Backend: Supabase Edge Function `social-admin`; five-minute Supabase Cron job `unio-direct-instagram-worker`. Operations, automatic publishing, queue creation and replies start disabled. Meta app setup and account connection must be completed by the owner; real Instagram delivery remains unverified until then. Setup and operational documentation: `docs/direct-instagram.md`. Existing Metricool/Buffer schedules are separate and were not changed.
