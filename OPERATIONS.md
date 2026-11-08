@@ -11,7 +11,7 @@
 
 Metricool createScheduledPost `mediaFiles` takes **absolute local file paths**, not URLs. The connector uploads the actual bytes; a Drive/GitHub/Vercel bridge is unnecessary. Supply a validated RGB JPEG, future ISO date **with timezone offset**, and a JSON `info` object with `text`, `providers:[{"network":"instagram"}]`, `autoPublish:true`, `draft:false`, `instagramData:{"autoPublish":true,"type":"POST","isAiGenerated":true}`, and accurate `mediaAltText`.
 
-A fresh bakery image was accepted on 8 November 2026 as post UUID -6356751351255708143 for 01:09 Europe/London. Acceptance means scheduled, not published. Check provider outcome and permalink before claiming publication. Never reuse this artwork.
+A fresh bakery image was accepted on 8 November 2026 as post UUID -6356751351255708143 for 01:09 Europe/London. The provider subsequently returned ERROR / Unknown at the final Instagram publication step. The artwork import was verified, but this post was not verified live. Do not retry it rapidly or reuse it in future cycles. Use standard 1080-pixel-wide RGB JPEGs for future posts and inspect account/permission status if errors persist.
 
 Buffer's Spanish first live post: https://www.instagram.com/p/DfdfT2sFCVa/ . Its recurring unattended execution remains to be verified. Authentication or approval failures must be reported honestly.
 
