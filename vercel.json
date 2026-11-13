@@ -77,6 +77,22 @@
     {
       "source": "/admin",
       "destination": "/admin.html"
+    },
+    {
+      "source": "/journal",
+      "destination": "/journal/index.html"
+    },
+    {
+      "source": "/es/journal",
+      "destination": "/es/journal/index.html"
+    },
+    {
+      "source": "/journal/i-dont-hate-profit",
+      "destination": "/journal/i-dont-hate-profit.html"
+    },
+    {
+      "source": "/es/journal/i-dont-hate-profit",
+      "destination": "/es/journal/i-dont-hate-profit.html"
     }
   ]
 }
