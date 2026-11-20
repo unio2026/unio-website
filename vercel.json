@@ -93,6 +93,14 @@
     {
       "source": "/es/journal/i-dont-hate-profit",
       "destination": "/es/journal/i-dont-hate-profit.html"
+    },
+    {
+      "source": "/journal/you-keep-the-economy-moving",
+      "destination": "/journal/you-keep-the-economy-moving.html"
+    },
+    {
+      "source": "/es/journal/you-keep-the-economy-moving",
+      "destination": "/es/journal/you-keep-the-economy-moving.html"
     }
   ]
 }
