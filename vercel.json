@@ -101,6 +101,14 @@
     {
       "source": "/es/journal/you-keep-the-economy-moving",
       "destination": "/es/journal/you-keep-the-economy-moving.html"
+    },
+    {
+      "source": "/journal/a-business-designed-not-to-extract-wealth",
+      "destination": "/journal/a-business-designed-not-to-extract-wealth.html"
+    },
+    {
+      "source": "/es/journal/a-business-designed-not-to-extract-wealth",
+      "destination": "/es/journal/a-business-designed-not-to-extract-wealth.html"
     }
   ]
 }
